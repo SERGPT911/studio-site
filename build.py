@@ -42,6 +42,13 @@ def main() -> int:
     # Custom domain: write CNAME only when SITE_URL is not a github.io address.
     if not cfg["DOMAIN"].endswith("github.io"):
         (OUT / "CNAME").write_text(cfg["DOMAIN"] + "\n", encoding="utf-8")
+    # Inline the stylesheet into index.html (removes a render-blocking request).
+    idx = OUT / "index.html"
+    css = (OUT / "styles.css").read_text(encoding="utf-8")
+    page = idx.read_text(encoding="utf-8")
+    tag = '<link rel="stylesheet" href="styles.css">'
+    if tag in page:
+        idx.write_text(page.replace(tag, "<style>" + css + "</style>"), encoding="utf-8", newline="\n")
     (OUT / ".nojekyll").write_text("", encoding="utf-8")
     print(f"built -> {OUT}  (site: {cfg['SITE_URL']})")
     return 0

@@ -38,7 +38,7 @@ ul,ol{margin:0;padding:0;list-style:none}
 .link:hover{border-color:var(--gold)}
 
 /* header */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(12,12,14,.72);backdrop-filter:saturate(140%) blur(14px);-webkit-backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--line)}
+.site-header{position:sticky;top:0;z-index:50;background:rgba(12,12,14,.9);border-bottom:1px solid var(--line)}
 .nav{display:flex;align-items:center;justify-content:space-between;height:68px}
 .brand{display:inline-flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;font-size:18px;letter-spacing:-.01em}
 .brand-mark{width:26px;height:26px;border-radius:8px;background:var(--grad);position:relative;box-shadow:inset 0 1px 0 rgba(255,255,255,.45)}
@@ -97,7 +97,8 @@ ul,ol{margin:0;padding:0;list-style:none}
 }
 
 /* sections */
-.section{padding:104px 0;position:relative}
+.section{padding:104px 0;position:relative;content-visibility:auto;contain-intrinsic-size:auto 1200px}
+.site-footer{content-visibility:auto;contain-intrinsic-size:auto 300px}
 .section-tight{padding:88px 0}
 .section-alt{background:var(--bg-2);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .section-head{max-width:760px;margin-bottom:56px}
