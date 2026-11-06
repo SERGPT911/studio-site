@@ -1,0 +1,10 @@
+.env
+*.pyc
+__pycache__/
+.DS_Store
+*.log
+node_modules/
+*.key
+*.pem
+_raw/
+tools/_og_render.html

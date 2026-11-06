@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://sergpt911.github.io/studio-site/sitemap.xml

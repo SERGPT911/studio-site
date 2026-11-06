@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<style>
+@font-face{font-family:"Inter Tight";src:url(../src/fonts/inter-tight-var.woff2) format("woff2");font-weight:400 700}
+@font-face{font-family:"Instrument Serif";src:url(../src/fonts/instrument-serif-italic.woff2) format("woff2");font-style:italic}
+html,body{margin:0;width:1200px;height:630px;overflow:hidden;background:#0c0c0e;color:#f3efe7;font-family:"Inter Tight",sans-serif}
+.bg{position:absolute;inset:0;background:radial-gradient(50% 70% at 85% 30%,rgba(217,163,94,.28),transparent 60%),radial-gradient(40% 40% at 0% 0%,rgba(255,255,255,.06),transparent 60%)}
+.grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:60px 60px;-webkit-mask-image:radial-gradient(60% 70% at 30% 40%,#000,transparent 75%)}
+.c{position:absolute;left:80px;top:72px;width:680px}
+.brand{display:flex;align-items:center;gap:14px;font-size:28px;font-weight:600}
+.mark{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,#f0d29c,#d9a35e 55%,#b9803f);position:relative}
+.mark:after{content:"";position:absolute;inset:11px;background:#0c0c0e;clip-path:polygon(0 0,100% 0,100% 45%,45% 45%,45% 100%,0 100%)}
+h1{margin:64px 0 0;font-size:68px;line-height:1.04;letter-spacing:-.03em;font-weight:600}
+em{font-family:"Instrument Serif",serif;font-weight:400;background:linear-gradient(135deg,#f0d29c,#d9a35e 55%,#b9803f);-webkit-background-clip:text;color:transparent}
+p{margin-top:28px;font-size:24px;color:#a8a398}
+.imgs{position:absolute;right:-10px;top:60px;width:430px;height:540px}
+.imgs img{position:absolute;border-radius:20px;border:1px solid rgba(255,255,255,.15);box-shadow:0 30px 70px -20px #000}
+.a{width:270px;left:0;top:30px;transform:rotate(-5deg)}
+.b{width:180px;right:40px;top:0;transform:rotate(4deg);border:6px solid #1d1d22!important;border-radius:28px!important}
+</style></head>
+<body><div class="bg"></div><div class="grid"></div>
+<div class="c">
+  <div class="brand"><span class="mark"></span>{{STUDIO_NAME}}</div>
+  <h1>Websites, automation &amp; <em>AI agents</em> that ship.</h1>
+  <p>Small senior studio · US · EU · UAE</p>
+</div>
+<div class="imgs"><img class="a" src="../src/img/ozon-rosesmusk-wine.webp"><img class="b" src="../src/img/stashmap-ios-home.webp"></div>
+</body></html>
